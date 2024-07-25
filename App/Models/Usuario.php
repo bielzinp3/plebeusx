@@ -107,7 +107,14 @@ class Usuario extends Model {
     }
 
     public function deixarSeguirUsuario($id_usuario_seguindo) {
-        echo 'deixar de seguir usuário';
+        $query = "delete from usuarios_seguidores where id_usuario = :id_usuario and
+        id_usuario_seguindo = :id_usuario_seguindo";
+        $stmt = $this->db->prepare($query);
+        $stmt->bindValue(':id_usuario', $this->__get('id'));
+        $stmt->bindValue(':id_usuario_seguindo', $id_usuario_seguindo);
+        $stmt->execute();
+
+        return true;
     }
 }
 
