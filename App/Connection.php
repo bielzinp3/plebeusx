@@ -7,16 +7,16 @@ class Connection {
 	public static function getDb() {
 		try {
 
-			$conn = new \PDO(
-				"mysql:host=localhost;dbname=twitter_clone;charset=utf8",
-				"root",
-				"" 
+			$conn = new \PDO( // endereço do banco                                     //nome do banco
+				"mysql:host=sql202.infinityfree.com;dbname=if0_36977232_twitter;charset=utf8",
+				"if0_36977232",//usuário
+				"KNaE0bSL99yG" //senha 
 			);
 
 			return $conn;
 
 		} catch (\PDOException $e) {
-			//.. tratar de alguma forma ..//
+			echo 'Erro ao conectar com o banco de dados: ' . $e->getMessage();
 		}
 	}
 }
