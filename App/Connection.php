@@ -8,9 +8,9 @@ class Connection {
 		try {
 
 			$conn = new \PDO( // endereço do banco                                     //nome do banco
-				"mysql:host=sql202.infinityfree.com;dbname=if0_36977232_twitter;charset=utf8",
-				"if0_36977232",//usuário
-				"KNaE0bSL99yG" //senha 
+				"mysql:host=localhost:3306;dbname=alex0737_twitter;charset=utf8",
+				"alex0737_alexandre_liberato",//usuário
+				"Js-EBD5Mdxru" //senha 
 			);
 
 			return $conn;
